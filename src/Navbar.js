@@ -1,11 +1,11 @@
 import Header from './Header';
 import React, { useContext } from 'react';
-import {MyValueContext} from './Section';
+import {CountContext} from './App';
 
 
 function Navbar(){
 
-    const myvalue = useContext(MyValueContext)
+    const count = useContext(CountContext)
     
     return(
         <>
@@ -31,7 +31,7 @@ function Navbar(){
                         <button className="btn btn-outline-dark" type="submit" onClick={(event)=>event.preventDefault()}>
                             <i className="bi-cart-fill me-1"></i>
                             Cart
-                            <span className="badge bg-dark text-white ms-1 rounded-pill">{myvalue}</span>
+                            <span className="badge bg-dark text-white ms-1 rounded-pill">{count}</span>
                         </button>
                     </form>
                 </div>
